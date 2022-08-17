@@ -28,7 +28,8 @@ jobs:
       mkdir report
       curl -LO "https://download.sysdig.com/scanning/bin/sysdig-cli-scanner/$(curl -L -s https://download.sysdig.com/scanning/sysdig-cli-scanner/latest_version.txt)/linux/amd64/sysdig-cli-scanner"
       chmod +x ./sysdig-cli-scanner
-      SECURE_API_TOKEN=$(SDC_SECURE_TOKEN) ./sysdig-cli-scanner --apiurl https://secure.sysdig.com '$(RepositoryName)/$(service)$(Build.BuildNumber)' --policy sysdig-best-practices --output-json=/report/sysdig-report.json
+      SECURE_API_TOKEN=$(SDC_SECURE_TOKEN) ./sysdig-cli-scanner --apiurl https://secure.sysdig.com 'nginx' --policy sysdig-best-practices --output-json=/report/sysdig-report.json
+      # SECURE_API_TOKEN=$(SDC_SECURE_TOKEN) ./sysdig-cli-scanner --apiurl https://secure.sysdig.com '$(RepositoryName)/$(service)$(Build.BuildNumber)' --policy sysdig-best-practices --output-json=/report/sysdig-report.json
     displayName: "Image scan by Sysdig Secure"
     continueOnError: false
 
