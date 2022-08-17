@@ -8,6 +8,8 @@ pool:
 
 jobs:
 - job: SysdigScan
+  strategy:
+    parallel: 1
   displayName: Scan container image with Sysdig Secure
   steps:
   - task: Docker@1
