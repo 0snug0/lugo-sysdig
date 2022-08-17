@@ -5,7 +5,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+  demands: Limit -equals DisAbleParallel 
 
 jobs:
 - job: SysdigScan
