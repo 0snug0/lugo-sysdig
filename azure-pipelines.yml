@@ -5,6 +5,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+
 jobs:
 - job: SysdigScan
   displayName: Scan container image with Sysdig Secure
