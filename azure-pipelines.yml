@@ -1,6 +1,6 @@
 
-trigger:
-  batch: true
+trigger: none
+  # batch: true
 # - main
 
 pool:
