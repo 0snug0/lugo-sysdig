@@ -32,7 +32,7 @@ steps:
   inputs:
     sysdigurl: 'https://secure.sysdig.com'
     apikey: 'fc0cb26f-1855-44ba-b6c3-86b59c891186'
-    image: '$(imageName):$(tag)'
+    image: '$(imageName)'
     jsonOutputFile: 'sysdig-cli-scan-output.json'
 
 - task: PublishBuildArtifacts@1
